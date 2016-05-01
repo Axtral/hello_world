@@ -14,7 +14,7 @@ public class ControlEtiquette extends JToolBar {
     private ImageIcon[] iconesBoutons = new ImageIcon[18];
     private JRadioButton[] boutons = new JRadioButton[6];
     private final String nomsIcones[] = {"bhgauche", "bhcendre", "bhdroite",
-                                         "bvhaut", "bvcnedre", "bvbas"};
+                                         "bvhaut", "bvbas"};
 
     private final int changeGroupeIcones = 6;
 
