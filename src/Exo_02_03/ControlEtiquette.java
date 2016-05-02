@@ -37,6 +37,8 @@ public class ControlEtiquette extends JToolBar {
 
         for(int i = 0; i < changeGroupeIcones ; ++i){
             boutons[i] = new JRadioButton(iconesBoutons[i]);
+            boutons[i].setRolloverIcon(new ImageIcon("RESGRAF/" + nomsIcones[i]
+                    +"B.gif"));
             boutons[i].setSelectedIcon(new ImageIcon("RESGRAF/" + nomsIcones[i]+ "R.gif"));
             if( i < 3) {
                 troisPremierObject.add(boutons[i]);
