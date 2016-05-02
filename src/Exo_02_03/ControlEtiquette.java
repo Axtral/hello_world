@@ -31,8 +31,18 @@ public class ControlEtiquette extends JToolBar {
     }
 
     private  void creerBoutons(){
+
+        ButtonGroup troisPremierObject = new ButtonGroup();
+        ButtonGroup troisDernierObject = new ButtonGroup();
+
         for(int i = 0; i < changeGroupeIcones ; ++i){
             boutons[i] = new JRadioButton(iconesBoutons[i]);
+            if( i < 3) {
+                troisPremierObject.add(boutons[i]);
+            }
+            else {
+                troisDernierObject.add(boutons[i]);
+            }
         }
     }
 
@@ -45,6 +55,7 @@ public class ControlEtiquette extends JToolBar {
             this.add(boutons[i]);
         }
     }
+
 
     public static void main (String[] args){
         ControlEtiquette control = new ControlEtiquette();
