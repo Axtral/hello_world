@@ -5,6 +5,7 @@ import Exo_02_02.EtiquetteSimple;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 /**
  * Created by c14012299 on 29/04/16.
@@ -18,6 +19,11 @@ public class ControlEtiquette extends JToolBar {
                                          "bvhaut", "bvcentre", "bvbas"};
 
     private final int changeGroupeIcones = 6;
+
+    private final int position[] = { JLabel.LEFT, JLabel.CENTER, JLabel.RIGHT, //horizontal
+                                     JLabel.TOP, JLabel.CENTER, JLabel.BOTTOM}; //vertical
+
+    private EtiquetteSimple etiquette;
 
 
     private  void chargerIcones(){
@@ -43,23 +49,53 @@ public class ControlEtiquette extends JToolBar {
             boutons[i].setSelectedIcon(new ImageIcon("RESGRAF/" + nomsIcones[i]+ "R.gif"));
             if( i < 3) {
                 troisPremierObject.add(boutons[i]);
+                boutons[i].addActionListener( new EcouteurVercal(i));
             }
             else {
                 troisDernierObject.add(boutons[i]);
+                boutons[i].addActionListener(new EcouteurHorizonral(i));
             }
         }
     }
 
-    public ControlEtiquette (){
-        super();
-        this.chargerIcones();
-        this.creerBoutons();
-        for (int i = 0; i<boutons.length; ++i)
-        {
-            this.add(boutons[i]);
+
+    class EcouteurHorizonral implements ActionListener   {
+        private  int position;
+
+        EcouteurHorizonral(int position){
+
+        }
+
+        public void actionPerformed(ActionEvent evt){
+
         }
     }
 
+    class EcouteurVercal implements ActionListener {
+        private int position;
+
+        EcouteurVercal(int position){
+
+        }
+
+        public void actionPerformed(ActionEvent evt){
+
+        }
+    }
+
+    private void creeEcouteur(){
+
+    }
+
+
+    public ControlEtiquette (EtiquetteSimple etiquette) {
+        super();
+        this.chargerIcones();
+        this.creerBoutons();
+        for (int i = 0; i < boutons.length; ++i) {
+            this.add(boutons[i]);
+        }
+    }
 
     public static void main (String[] args){
         ControlEtiquette control = new ControlEtiquette();
