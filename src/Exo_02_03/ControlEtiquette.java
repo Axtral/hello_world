@@ -20,7 +20,7 @@ public class ControlEtiquette extends JToolBar {
 
     private final int changeGroupeIcones = 6;
 
-    private final int position[] = { JLabel.LEFT, JLabel.CENTER, JLabel.RIGHT, //horizontal
+    private final int positions[] = { JLabel.LEFT, JLabel.CENTER, JLabel.RIGHT, //horizontal
                                      JLabel.TOP, JLabel.CENTER, JLabel.BOTTOM}; //vertical
 
     private EtiquetteSimple etiquette;
@@ -63,7 +63,7 @@ public class ControlEtiquette extends JToolBar {
         private  int position;
 
         EcouteurHorizonral(int position){
-
+            this.position = position;
         }
 
         public void actionPerformed(ActionEvent evt){
@@ -75,7 +75,7 @@ public class ControlEtiquette extends JToolBar {
         private int position;
 
         EcouteurVercal(int position){
-
+            this.position = position;
         }
 
         public void actionPerformed(ActionEvent evt){
