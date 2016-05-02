@@ -4,6 +4,7 @@ import Exo_02_01.FenetreSimple;
 import Exo_02_02.EtiquetteSimple;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created by c14012299 on 29/04/16.
@@ -63,7 +64,14 @@ public class ControlEtiquette extends JToolBar {
     public static void main (String[] args){
         ControlEtiquette control = new ControlEtiquette();
         FenetreSimple cadre = new FenetreSimple("Exo 2.4.5 barre a outil");
+        ImageIcon chien = new ImageIcon("RESGRAF/Chien.gif");
+        EtiquetteSimple etiquette = new EtiquetteSimple("un chien",chien);
+        etiquette.setHorizontalTextPosition(LEFT);
+        etiquette.setVerticalTextPosition(CENTER);
+        cadre.getContentPane().add(etiquette);
         cadre.add(control);
+        cadre.add(control , BorderLayout.SOUTH);
+        cadre.add(etiquette , BorderLayout.CENTER);
         cadre.pack();
         cadre.setVisible(true);
         cadre.setLocationRelativeTo(null);
