@@ -22,9 +22,9 @@ public class ControlEtiquette extends JToolBar {
     private  void chargerIcones(){
         for(int i = 0 ; i < changeGroupeIcones; ++i){
             iconesBoutons[i] = new ImageIcon("RESGRAF/" + nomsIcones[i]+"gif");
-            iconesBoutons[i + changeGroupeIcones] = new ImageIcon("RESGRAF" + nomsIcones[i]
+            iconesBoutons[i + changeGroupeIcones] = new ImageIcon("RESGRAF/" + nomsIcones[i]
                             + "R.gif");
-            iconesBoutons[i + changeGroupeIcones * 2] = new ImageIcon("RESGRAF" + nomsIcones[i]
+            iconesBoutons[i + changeGroupeIcones * 2] = new ImageIcon("RESGRAF/" + nomsIcones[i]
                             +"B.gif");
         }
     }
